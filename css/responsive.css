@@ -6,6 +6,16 @@
         grid-template-rows: auto auto auto;
         gap: 0.5rem;
         max-width: fit-content;
-        margin: 0 auto;
+        margin: 1rem auto auto auto;
     }
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: var(--cor-bg);
+    }
+}
+
+@media (min-width: 1024px) {
+    
 }

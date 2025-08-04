@@ -1,21 +1,90 @@
 /* BASE CSS */
-
 :root {
-  --font-main: 'Inter', system-ui, sans-serif;
-  --color-bg: #f5faff;
-  --color-text: #2e3440;
-  --color-accent: #a0c4ff;
-  --color-soft: #e0e7ff;
-  --color-muted: #dbe9f4;
+  --cor-bg: #dfdfdf;
+  --cor-texto: #2e3440;
+  --azul: #1521A6;
+  --cor-soft: #e0e7ff;
+  --cor-muted: #dbe9f4;
+
+  --font-titulo: 'Oxygen Mono', monospace;
+  /*Oxygen Mono weight: 400*/
+  --font-texto: 'Ubuntu', sans-serif;
+  /*Ubuntu weight: 300, 400, 500, 700*/
+}
+
+/*-- FONTES --*/
+/* Oxygen Mono - Regular */
+@font-face {
+  font-family: 'Oxygen Mono';
+  src: url('../assets/fonts/OxygenMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+/* Ubuntu - Light */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+/* Ubuntu - Light Italic */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+/* Ubuntu - Regular */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+/* Ubuntu - Italic */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+/* Ubuntu - Medium */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+/* Ubuntu - Medium Italic */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+/* Ubuntu - Bold */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+/* Ubuntu - Bold Italic */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/Ubuntu-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
 }
 
 body {
   background-color: #fff;
   color: var(--color-text);
   font-size: 1rem;
+  font-family: var(--font-texto);
 }
 
 .container {
+  margin: 0;
 }
 
 /*-- PÁGINA INICIAL --*/
@@ -23,7 +92,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 5rem;
   min-height: 90vh;
   flex: 1;
 }
@@ -44,18 +113,29 @@ body {
 .nav-link {
   width: fit-content;
   display: block;
-  background-color: #ffffff80;
+  background-color: #ffffff40;
+  font-family: var(--font-titulo);
+  text-transform: lowercase;
   color: var(--color-text);
   padding: 0.5rem 1rem;
   white-space: nowrap;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #ffffff4d;
+  cursor: pointer;
+}
+.nav-link:hover {
+  background: #D5E1E9;
+  color: var(--azul);
 }
 
 /*-- HERO --*/
 .titulo {
   font-size: 3rem;
   line-height: 3rem;
-  text-transform: uppercase;
+  text-transform: lowercase;
   text-align: center;
+  font-family: var(--font-titulo);
 }
 
 #hero p {
