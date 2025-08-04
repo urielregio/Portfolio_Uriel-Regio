@@ -1,6 +1,6 @@
 /* BASE CSS */
 :root {
-  --cor-bg: #dfdfdf;
+  --cinza: #ebebeb;
   --cor-texto: #2e3440;
   --azul: #1521A6;
   --cor-soft: #e0e7ff;
@@ -83,17 +83,17 @@ body {
   font-family: var(--font-texto);
 }
 
-.container {
-  margin: 0;
+main {
+  max-width: 1200px;
 }
 
 /*-- PÁGINA INICIAL --*/
 .pagina-inicial main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   gap: 5rem;
-  min-height: 90vh;
+  min-height: 60vh;
   flex: 1;
 }
 
@@ -105,9 +105,18 @@ body {
 }
 
 /*-- MENU DE NAVEGACAO --*/
+#menu {
+  display: flex;
+  align-items: center;
+
+}
+
 #menu ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nav-link {
@@ -124,12 +133,20 @@ body {
   border: 1px solid #ffffff4d;
   cursor: pointer;
 }
+
 .nav-link:hover {
   background: #D5E1E9;
   color: var(--azul);
 }
 
 /*-- HERO --*/
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 .titulo {
   font-size: 3rem;
   line-height: 3rem;
@@ -140,11 +157,12 @@ body {
 
 #hero p {
   margin: 1rem 2rem;
+  max-width: 400px;
 }
 
 .banner img {
   width: 100%;
-  height: 35vh;
+  height: 40vh;
   object-fit: cover;
   display: block;
 }
@@ -154,4 +172,5 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   bottom: 0;
+  color: #8a8a8a;
 }
