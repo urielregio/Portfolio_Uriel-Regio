@@ -1,15 +1,28 @@
 
-@media (max-width: 1024px) {
-    body.pagina-inicial #menu ul {
+@media (max-width: 1023px) {
+    
+    .inicio #menu.inicio {
+        all: unset;
+        display: block;
+        position: static;
+        transform: none;
+        height: auto;
+        padding: 0;
+        backdrop-filter: none;
+        background-color: transparent;
+        border-left: none;
+        box-shadow: none;
+        transition: none;
+        height: 30vh;
+    }
+    
+    #menu.inicio ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
         gap: 0.5rem;
         max-width: fit-content;
         margin: 0.5rem auto auto auto;
-    }
-    #menu {
-        height: 30vh;
     }
 }
 
@@ -22,20 +35,61 @@
         background-color: var(--cor-bg);
     }
 
-    .container {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        gap: 4rem;
-        flex: 1;
-        margin: 0 0.5rem;
+    .inicio main {
+        align-items: center;
     }
 
-    .pagina-inicial main {
+    main {
+        max-width: 1200px;
+    }
+
+    .inicio .container {
+        display: flex;
         align-items: center;
     }
 
     /*-- MENU DE NAVEGACAO --*/
+    #btn-menu, #btn-fechar {
+        display: none;
+    }
+
+    #menu {
+        all: unset;
+        display: block;
+        position: static;
+        transform: none;
+        height: auto;
+        padding: 0;
+        backdrop-filter: none;
+        background-color: transparent;
+        border-left: none;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .box-menu {
+        position: fixed;
+        width: 20vw;
+        height: 100%;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 1rem;
+    }
+
+    .box-content {
+        width: 80vw;
+        padding: 1rem;
+        justify-items: center;
+    }
+
+    .inicio.box-content {
+        justify-content: center;
+        justify-items: center;
+    }
+
     .nav-link {
         background-color: var(--cinza);
     }
@@ -43,6 +97,7 @@
     /*-- HERO --*/
     #hero {
         flex-direction: row;
+        justify-content: center;
     }
 
     .banner img {
